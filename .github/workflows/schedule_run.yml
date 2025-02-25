@@ -5,11 +5,6 @@ on:
   schedule:
     - cron: '*/5 * * * *'
 
-permissions:
-  contents: read|write
-  actions:  read|write
-  
-
 jobs:
   build:
 
