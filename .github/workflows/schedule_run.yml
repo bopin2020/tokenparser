@@ -1,0 +1,29 @@
+# 5 min run git action
+name: Python application
+
+on:
+  schedule:
+    - cron: '5 * * * *'
+
+permissions:
+  contents: read|write
+  actions:  read|write
+  
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.12"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        python run.py .\test.bp
+    - name: clear log
+        del debug.log
