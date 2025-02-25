@@ -26,4 +26,5 @@ jobs:
         python -m pip install --upgrade pip
         python run.py .\test.bp
     - name: clear log
-        del debug.log
+      run:
+        rm debug.log
