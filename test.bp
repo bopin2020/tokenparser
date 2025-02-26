@@ -9,4 +9,5 @@ test comments aasas
 
 set name = "bopin";
 set age = 28;
+set sex = true;
 set version = "version 1.0";
